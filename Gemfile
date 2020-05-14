@@ -50,3 +50,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rspec-rails', '4.0.0.beta3', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'autoprefixer-rails'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
