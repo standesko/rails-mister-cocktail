@@ -1,0 +1,14 @@
+<div class="d-flex justify-center">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-sm-4 col-6">
+        <div class="card align-middle m-3 ">
+          <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/fresh-home-made-tequila-sunrise-cocktails-royalty-free-image-1581697157.jpg?crop=0.670xw:1.00xh;0.140xw,0&resize=480:*" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

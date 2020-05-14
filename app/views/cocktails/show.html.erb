@@ -1,0 +1,42 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://wisk.ai/wp-content/uploads/2019/07/liquor-inventory-scale-2.jpg);">
+  <div class="container">
+    <h1><%= @cocktail.name %></h1>
+    <p>Hell of a cocktail!</p>
+  </div>
+</div>
+
+<div class="container overlap text-align-center">
+
+  <div class="card  align-middle m-3 w-100" style="width: 18rem;">
+    <!-- Contains the info about restaurant -->
+    <div class="card-body">
+      <h3 class="card-title"><%= @cocktail.name %></h5>
+      <p class="card-text">Recipe</p>
+    </div>
+  </div>
+
+  <div class="card align-middle m-3 w-100" style="width: 18rem;">
+    <!-- Contains the info about restaurant -->
+    <div class="card-body">
+      <h3 class="card-title">Info</h3>
+      <p class="card-text">Description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi temporibus facilis id nemo aperiam sunt optio doloremque ducimus minus pariatur, tempore numquam dolorum autem culpa ea voluptatum aspernatur, molestiae repellat.</p>
+      <% dose = 0 %>
+      <% @doses.each do |dose| %>
+        <p>
+          <%= dose.description %> of <%= dose.ingredient.name %>.
+          <%= link_to "Delete", dose_path(dose.id), method: "delete", :class => "btn btn-danger" %>
+        </p>
+      <% end %>
+      <h4><%= link_to "Add doses", new_cocktail_dose_path(@cocktail) %></h4>
+
+     <!--  <%#= simple_form_for [@cocktail, @dose] do |f| %>
+        <%#= f.input :description%>
+        <%#= f.association :ingredient %>
+        <%#= f.submit%>
+      <%# end %> -->
+
+      <p class="card-text"><i class="fas fa-euro-sign"></i>15</p>
+      <%= link_to 'Back', cocktails_path, :class => "btn btn-primary" %> |
+  </div>
+
+</div>
