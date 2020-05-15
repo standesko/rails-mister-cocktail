@@ -37,7 +37,8 @@
       <div style="display: block">
         <p class="card-text"><i class="fas fa-euro-sign"></i>15</p>
         <%= link_to 'Back', cocktails_path, :class => "btn btn-primary" %> |
-        <%= link_to 'Edit', edit_cocktail_path(@cocktail), :class => "btn btn-primary" %>
+        <%= link_to 'Edit', edit_cocktail_path(@cocktail), :class => "btn btn-primary" %> |
+        <%= link_to 'Delete Cocktail', cocktail_path(@cocktail), method: :delete, :class => "btn btn-primary" %> |
       </div>
     </div>
 
