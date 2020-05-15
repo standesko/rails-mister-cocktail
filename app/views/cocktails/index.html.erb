@@ -9,7 +9,11 @@
     <% @cocktails.sort.each do |cocktail| %>
       <div class="col-sm-4 col-6">
         <div class="card align-middle m-3 ">
-          <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2011%2F10%2F2010-r-cocktail-cynar-sour.jpg" class="card-img-top" alt="...">
+          <% if cocktail.photo.attached? %>
+            <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+          <% else  %>
+            No Picture
+          <% end %>
           <div class="card-body text-center">
             <h5 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
           </div>
